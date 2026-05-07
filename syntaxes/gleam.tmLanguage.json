@@ -6,6 +6,9 @@
       "include": "#comments"
     },
     {
+      "include": "#attributes"
+    },
+    {
       "include": "#keywords"
     },
     {
@@ -45,6 +48,10 @@
           "match": "(==|!=)"
         },
         {
+          "name": "keyword.operator.bit-array.gleam",
+          "match": "(<<|>>)"
+        },
+        {
           "name": "keyword.operator.comparison.float.gleam",
           "match": "(<=\\.|>=\\.|<\\.|>\\.)"
         },
@@ -75,6 +82,10 @@
         {
           "name": "keyword.operator.assignment.gleam",
           "match": "="
+        },
+        {
+          "name": "keyword.operator.tuple.gleam",
+          "match": "#"
         }
       ]
     },
@@ -92,8 +103,24 @@
     "comments": {
       "patterns": [
         {
+          "name": "comment.line.module-doc.gleam",
+          "match": "\/\/\/\/.*"
+        },
+        {
+          "name": "comment.line.documentation.gleam",
+          "match": "\/\/\/.*"
+        },
+        {
           "name": "comment.line.gleam",
           "match": "\/\/.*"
+        }
+      ]
+    },
+    "attributes": {
+      "patterns": [
+        {
+          "name": "keyword.other.attribute.gleam",
+          "match": "@[[:lower:]][[:word:]]*"
         }
       ]
     },
